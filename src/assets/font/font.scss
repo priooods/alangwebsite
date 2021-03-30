@@ -1,0 +1,50 @@
+@font-face{
+    src: url('./Gopher-Black.ttf');
+    font-family: 'black';
+};
+@font-face{
+    font-family: 'medium';
+    src: url('./Gopher-Medium.ttf');
+}
+@font-face{
+    font-family: 'bold';
+    src: url('./Gopher-Bold.ttf');
+}
+@font-face{
+    font-family: 'heavy';
+    src: url('./Gopher-Heavy.ttf');
+}
+@font-face{
+    font-family: 'heavy-italic';
+    src: url('./Gopher-HeavyItalic.ttf');
+}
+@font-face{
+    font-family: 'thin';
+    src: url('./Gopher-Thin.ttf');
+}
+@font-face{
+    font-family: 'black-italic';
+    src: url('./Gopher-BlackItalic.ttf');
+}
+@font-face{
+    font-family: 'bold-italic';
+    src: url('./Gopher-BoldItalic.ttf');
+}
+@font-face{
+    font-family: 'thin-italic';
+    src: url('./Gopher-ThinItalic.ttf');
+}
+@font-face{
+    font-family: 'reguler';
+    src: url('./Gopher-Regular.ttf');
+} 
+$font-black: 'black';
+$font-medium: 'medium';
+$font-heavy: 'heavy';
+$font-heavy-italic: 'heavy-italic';
+$font-reguler: 'reguler';
+$font-bold: 'bold';
+$font-bold-italic: 'bold-italic';
+$font-thin-italic: 'thin-italic';
+$font-black-italic: 'black-italic';
+$font-thin: 'thin';
