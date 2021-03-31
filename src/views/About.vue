@@ -90,7 +90,3 @@ export default {
   mixins: [LocomotiveScroll],
 }
 </script>
-
-<style>
-
-</style>
