@@ -40,8 +40,10 @@ export default {
 @import '@/style.scss';
 body{
   margin: 0;
-  background: $background;
   padding: 0;
+}
+#app{
+  background: $background;
 }
 .view,.navigasi{
   padding-left: 30px;

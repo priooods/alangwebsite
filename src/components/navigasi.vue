@@ -9,20 +9,33 @@
               <span class="mx-1 anim5"> | </span>
               <router-link to="/contact" class="anim6">contact</router-link>
           </div>
+          <p class="text-uppercase">Pandeglang, {{times}}</p>
       </div> 
   </div>
 </template>
 
 <script>
+import moment from 'moment';
 export default {
     name: 'Navigasi',
     methods:{
         back(){
             return this.$router.push('/');
         },
+        gettimes(){
+            moment.locale('en');
+            this.times = moment().format('h:mm:ss a');
+        }
+    },
+    data(){
+        return{
+            times: null
+        }
     },
     mounted() {
-      this.animation();  
+        setInterval(() => {
+            this.gettimes()
+        }, 1000);
     },
 }
 </script>
@@ -34,9 +47,6 @@ export default {
     p, .route{
         font-size: 13px;
         font-family: $font-reguler;
-    }
-    p:hover, span{
-        cursor: pointer;
     }
     .route{
         margin-left: 155px;

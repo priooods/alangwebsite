@@ -8,7 +8,6 @@ export default {
         repeat: true,
         scrollFromAnywhere: true,
         reloadOnContextChange: true,
-        scrollbarContainer: false,
         scrollbarClass: "c-scrollbar",
         tablet: {
           smooth: true,
