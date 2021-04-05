@@ -48,18 +48,18 @@ export default {
         font-size: 13px;
         font-family: $font-reguler;
     }
+    .anim1{
+        cursor: pointer;
+    }
     .route{
         margin-left: 155px;
-        a{ color: $primary; }
-        a.active{ color: $red; }
+        a{
+            text-decoration: none;
+        }
         a:hover{
-            color: $red;
             text-decoration: none;
         }
         
-    }
-    .eng{
-        color: $red;
     }
 }
 </style>

@@ -8,7 +8,7 @@
             <p class="text-uppercase desc2" data-scroll>want to learn <span id="typeit" data-cursor-hover></span></p>
         </div>
       </div>
-      <cursor-fx />
+      <cursor-fx :color="colors" :color-hover="colors"/>
   </div>
 </template>
 
@@ -21,6 +21,9 @@ export default {
   mixins: [LocomotiveScroll,Animasi],
   mounted(){
       this.type();
+  },
+  props:{
+      colors: String
   },
   methods: {
       type(){
@@ -64,12 +67,10 @@ export default {
             margin-left: 5px;
         }
         #typeit{
-            color: $red;
             font-family: $font-bold;
         }
     }
     .ai{
-        color: $primary;
         position: fixed;
         bottom: 20px;
         left: 20px;

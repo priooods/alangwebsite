@@ -2,7 +2,7 @@
   <div class="contact" data-scroll-container>
       <div class="d-md-flex px-5">
           <div class="isi position-relative">
-              <p class="text-uppercase mt-5 anim">for any enquiry <br>or just to say <span>hello</span> <br> reach out <a href="#" data-cursor-hover>here</a></p>
+              <p class="text-uppercase mt-5 anim">for any enquiry <br>or just to say <span>hello</span> <br> reach out <a class="here" href="#" data-cursor-hover>here</a></p>
               <div class="line lr mt-5 w-auto"></div>
               <div class="d-flex justify-content-end my-5 ctc">
                   <h6 data-cursor-hover class="anim">info <br>@alanginstitute.com <br>(+61) 897 3748 2</h6>
@@ -17,7 +17,7 @@
           </div>
       </div>
       <h3 id="circlebesar">contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;</h3>
-      <cursor-fx />
+      <cursor-fx :color="colors" :color-hover="colors"/>
   </div>
 </template>
 
@@ -30,6 +30,9 @@ export default {
   mounted() {
     this.circlefull();
     this.circle();
+  },
+  props:{
+      colors: String
   },
   methods:{
     circle(){
@@ -64,32 +67,21 @@ export default {
           font-family: $font-perpetua;
           font-size: 28px;
           line-height: 26px;
-          span{
-              color: $red;
-          }
           a{
-              color: $primary;
               text-decoration: none;
-              border-bottom: 1px solid $primary;
-              border-color: $primary;
               line-height: 0.50;
           }
-      }
-      .line{
-          background: $primary;
-          height: 0.80px;
       }
       .ctc{
         width: 530px;
         h6,a{
             font-family: $font-reguler;
             font-size: 13px;
-            color: $primary;
+            
             line-height: 16px;
             text-transform: uppercase;
         }  
         a:hover{
-            color: $red;
             text-decoration: none;
         }
       }
@@ -108,7 +100,6 @@ export default {
           #circlekecil{
             font-family: $font-bold;
             left: 50%;
-            color: $red;
             font-size: 18px;
             top: 150%;
             animation: animate 30s infinite linear;

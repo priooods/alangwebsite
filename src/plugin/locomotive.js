@@ -8,10 +8,10 @@ export default {
         repeat: true,
         scrollFromAnywhere: true,
         reloadOnContextChange: true,
-        scrollbarClass: "c-scrollbar",
         tablet: {
           smooth: true,
         },
+        initClass: "has-scroll-init",
         smartphone: {
           smooth: true,
         },

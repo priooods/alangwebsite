@@ -22,6 +22,6 @@ export default {
     },
   },
   mounted() {
-    this.animasi();
+    this.animasi;
   },
 };

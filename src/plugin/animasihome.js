@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 export default {
   computed: {
-    animasi() {
+    animasi: function() {
       let tl = new gsap.timeline();
       tl.fromTo(
         ".logo",
@@ -31,6 +31,6 @@ export default {
     },
   },
   mounted() {
-    this.animasi();
+    this.animasi;
   },
 };

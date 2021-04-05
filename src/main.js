@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "boxicons";
 import "boxicons/css/boxicons.min.css";
+import "./style.scss";
 import "vuesax/dist/vuesax.css";
 import CursorFx from "@luxdamore/vue-cursor-fx";
 import "@luxdamore/vue-cursor-fx/dist/CursorFx.css";
@@ -17,6 +18,8 @@ Vue.use(CursorFx);
 Vue.use(gsap);
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
+
+
 
 new Vue({
   router,
