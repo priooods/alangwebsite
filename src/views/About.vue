@@ -8,11 +8,16 @@
             <h2 data-scroll><span class="sp">Pandeglang with us</span></h2>
             <h2 data-scroll><span class="sp">right now</span></h2>
         </div>
-        <div class="top-mid row" data-scroll-section>
-          <div class="menus col-md-2">
+        <div class="top-mid row" data-scroll-section data-persistent>
+          <div class="col-md-2 menus" data-scroll>
+              <ul class="list-unstyled" data-scroll-sticky data-scroll-target="#visi">
+                  <li><a href="#visi" data-scroll-to>Visi & Misi</a></li>
+                  <li><a href="#team" data-scroll-to>Team</a></li>
+                  <li><a href="#focus" data-scroll-to>Focus</a></li>
+              </ul>
           </div>
             <div class="col">
-                <div class="visimisi row justify-content-center">
+                <div id="visi" class="visimisi row justify-content-center">
                     <div class="w-500">
                         <h5 data-scroll class="text-uppercase">Alang Institute To become an alternative media for education
                         and training for the community to develop all their potential in forming superior
@@ -35,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="teams position-relative">
+                <div id="team" class="teams position-relative">
                     <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" class="text-uppercase">we are a <br>tightly-knit <br>team.</h2>
                     <h4 data-scroll id="circling" class="position-absolute">Alang Institute Alang Institute </h4>
                     <div class="people row justify-content-center">
@@ -75,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="learn position-relative">
+                <div id="focus" class="learn position-relative">
                     <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">we work day in <br> day out to <br> elevate you</h2>
                     <div class="learn__content w-auto d-flex justify-content-center">
                         <div class="w-500 row">
@@ -254,9 +259,6 @@ export default {
     }
     .top-mid{
         margin-top: 200px;
-        // .menus{
-        //     background: burlywood;
-        // }
         .visimisi{
             .w-500{
                 width: 600px;
