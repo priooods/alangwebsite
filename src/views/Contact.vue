@@ -1,13 +1,13 @@
 <template>
   <div class="contact" data-scroll-container>
-      <div class="d-md-flex px-5">
+      <div class="d-md-flex d-md-px-5">
           <div class="isi position-relative">
-              <p class="text-uppercase mt-5 anim">for any enquiry <br>or just to say <span>hello</span> <br> reach out <a class="here" href="#" data-cursor-hover>here</a></p>
+              <p class="text-uppercase mt-5 anim">for any enquiry <br class="d-none d-md-block">or just to say <span>hello</span> <br> reach out <a class="here" href="#" data-cursor-hover>here</a></p>
               <div class="line lr mt-5 w-auto"></div>
-              <div class="d-flex justify-content-end my-5 ctc">
-                  <h6 data-cursor-hover class="anim">info <br>@alanginstitute.com <br>(+61) 897 3748 2</h6>
-                  <h6 class="mx-auto anim" data-cursor-hover>4213 Pandeglang <br> Banten (IND)<br>(+61) 897 3748 2</h6>
-                  <h6 data-cursor-hover class="anim"><a href="#">Facebook</a><br><a href="">Youtube</a><br><a href="">Instagram</a></h6>
+              <div class="row w-100 justify-content-end my-5 ctc">
+                  <h6 data-cursor-hover class="anim col-md-4 col-6">info <br>@alanginstitute.com <br>(+62) 813 9849 8822</h6>
+                  <h6 class="mx-auto anim col-md-4 col-6" data-cursor-hover>4213 Pandeglang <br> Banten (IND)<br>(+62) 896 4381 6568</h6>
+                  <h6 data-cursor-hover class="anim col-md-4 col-12"><a href="https://www.facebook.com/priooods/">Facebook</a><br><a href="#">Youtube</a><br><a href="https://www.instagram.com/priooods/">Instagram</a></h6>
               </div>
               <div class="line ll mt-5 w-auto"></div>
               <div class="bc position-absolute">
@@ -16,7 +16,7 @@
               </div>
           </div>
       </div>
-      <h3 id="circlebesar">contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;</h3>
+      <h3 id="circlebesar" class="d-none">contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;</h3>
       <cursor-fx :color="colors" :color-hover="colors"/>
   </div>
 </template>
@@ -113,6 +113,14 @@ export default {
     }
     100%{
       transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+}
+@media (max-width: 700px){
+  .contact{
+    .isi{
+      max-width: 100%;
+      margin-left: 0px;
     }
   }
 }

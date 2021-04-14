@@ -1,9 +1,9 @@
 <template>
   <div class="home" data-scroll-container>
       <h1 class="ai text-uppercase logo">ai</h1>
-      <div class="top container" data-scroll-section>
-        <h1 class="anim w-auto" data-scroll data-cursor-hover>learn anything, <br> from everywhere <br> and accelerate future</h1>
-        <div class="inl">
+      <div class="top w-100 row" data-scroll-section>
+        <h1 class="anim w-100 col-12" data-scroll data-cursor-hover>learn anything, <br class="d-none d-md-flex d-lg-flex d-xl-flex"> from everywhere <br> and accelerate future</h1>
+        <div class="inl col-12">
             <p class="text-uppercase mt-4 desc1" data-scroll>we believe everyone has the capacity to be creative, <br> study case is a place where people develop their own potential</p>
             <p class="text-uppercase desc2" data-scroll>want to learn <span id="typeit" data-cursor-hover></span></p>
         </div>
@@ -52,15 +52,15 @@ export default {
 @import '@/assets/font/font.scss';
 @import '../style.scss';
 .home{
-    padding-top: 30px;
+    padding-top: 120px;
     h1{
         font-family: $font-perpetua;
         text-transform: uppercase;
         line-height: 50px;
         font-size: 60px;
+        max-width: 100%;
     }
     .top{
-        margin-top: 90px;
         p{
             font-family: $font-reguler;
             font-size: 14px;
@@ -75,6 +75,18 @@ export default {
         bottom: 20px;
         left: 20px;
         font-family: $font-perpetua;
+    }
+}
+@media (max-width: 700px){
+    .home{
+        padding-top: 100px !important;
+        h1{
+            line-height: 40px;
+            font-size: 50px;
+        }
+    }
+    .ai{
+        visibility: hidden;
     }
 }
 </style>

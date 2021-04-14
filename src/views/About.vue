@@ -1,47 +1,53 @@
 <template>
     <div class="about" data-scroll-container>
-        <div class="tops" data-scroll-section>
+        <div class="tops mt-5 row d-block d-md-none d-lg-none d-xl-none" data-scroll-section data-persistent>
+            <h2 data-scroll><span class="sp">kita adalah</span></h2>
+            <h2 data-scroll><span class="sp">alang</span></h2>
+            <h2 data-scroll><span class="sp">institute</span></h2>
+            <h2 data-scroll><span class="sp">berpegangan</span></h2>
+            <h2 data-scroll><span class="sp">tangan</span></h2>
+            <h2 data-scroll><span class="sp">bersama kami</span></h2>
+            <h2 data-scroll><span class="sp">membangun</span></h2>
+            <h2 data-scroll><span class="sp">pandegelang</span></h2>
+        </div>
+        <div class="tops d-none d-md-block d-lg-block d-xl-block" data-scroll-section>
             <h2 data-scroll><span class="sp">we are</span></h2>
             <h2 data-scroll><span class="sp">alang institute, </span></h2>
             <h2 data-scroll><span class="sp">holding hands together </span></h2>
             <h2 data-scroll><span class="sp">advancing the city of</span></h2>
-            <h2 data-scroll><span class="sp">Pandeglang with us</span></h2>
+            <h2 data-scroll><span class="sp">Pandegelang with us</span></h2>
             <h2 data-scroll><span class="sp">right now</span></h2>
         </div>
         <div class="top-mid row" data-scroll-section data-persistent>
-          <div class="col-md-2 menus" data-scroll>
-              <ul class="list-unstyled" data-scroll-sticky data-scroll-target="#visi">
-                  <li><a href="#visi" data-scroll-to>Visi & Misi</a></li>
-                  <li><a href="#team" data-scroll-to>Team</a></li>
-                  <li><a href="#focus" data-scroll-to>Focus</a></li>
-              </ul>
-          </div>
+          <div class="col-md-2 menus" data-scroll></div>
             <div class="col">
                 <div id="visi" class="visimisi row justify-content-center">
-                    <div class="w-500">
-                        <h5 data-scroll class="text-uppercase">Alang Institute To become an alternative media for education
-                        and training for the community to develop all their potential in forming superior
-                        and adaptive personalities according to the needs of the times.</h5>
+                    <div class="w-500 anim">
+                        <h6 data-scroll class="text-uppercase mb-5">Visi & misi</h6>
+                        <h5 data-scroll class="text-uppercase">Menjadi media alternatif pengembangan sumber daya manusia 
+                            melalui pendidikan, pelatihan dan pengabdian masyarakat untuk mengembangkan segala potensi diri, 
+                            dalam membentuk pribadi unggul dan adaptif sesuai dengan kebutuhan zaman
+                        </h5>
                         <div class="misi">
                             <div class="row justify-content-start">
                                 <div class="col-md-6 ">
-                                    <p class="text-uppercase" data-scroll>Developing curriculum and continuous and competent learning tools</p>
+                                    <p class="text-uppercase" data-scroll>Menyusun kurikulum dan perangkat pembelajaran berkelanjutan dan berkompetensi</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="text-uppercase" data-scroll>Support and facilitate people's interests and talents by holding classes</p>
+                                    <p class="text-uppercase" data-scroll>Mendukung dan memfasilitasi minat dan bakat masyarakat dengan mengadakan kelas, seminar dan talkshow</p>
                                 </div>
                                 <div class="col-md-6 mt-4">
-                                    <p class="text-uppercase" data-scroll>Provide and develop community knowledge and expertise by teaching and training</p>
+                                    <p class="text-uppercase" data-scroll>Mewadahi dan mengembangkan pengetahuan dan keahlian dengan pengajaran dan pelatihan, serta turut memberdayakan masyarakat sekitar dengan pengabdian</p>
                                 </div>
                                 <div class="col-md-6 mt-4">
-                                    <p class="text-uppercase" data-scroll>Establishing good relationships and collaborating with foundations, agencies or areas of governance both within the region and outside the region</p>
+                                    <p class="text-uppercase" data-scroll>Menjalin relasi yang baik dan bekerja sama dengan yayasan, instansi atau bidang kepemerintahan selinear baik dalam daerah maupun di luar daerah</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="team" class="teams position-relative">
-                    <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2" class="text-uppercase">we are a <br>tightly-knit <br>team.</h2>
+                    <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1" class="text-uppercase">we are a <br>tightly-knit <br>team.</h2>
                     <h4 data-scroll id="circling" class="position-absolute">Alang Institute Alang Institute </h4>
                     <div class="people row justify-content-center">
                         <div class="w-500">
@@ -84,9 +90,9 @@
                     <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">we work day in <br> day out to <br> elevate you</h2>
                     <div class="learn__content w-auto d-flex justify-content-center">
                         <div class="w-500 row">
-                            <div class="line w-auto col-md-12"></div>
-                            <h6 class="text-uppercase my-4">work on</h6>
-                            <div class="line w-auto col-md-12"></div>
+                            <div class="line w-auto col-md-12 d-none d-md-block d-lg-block d-xl-block"></div>
+                            <h6 data-scroll class="text-uppercase my-4">work on</h6>
+                            <div class="line w-auto col-md-12 d-none d-md-block d-lg-block d-xl-block"></div>
                             <div class="col-md-6 icons_ pl-0 box__br py-3 ">
                                 <div class="row justify-content-start pt-4">
                                     <div class="position-relative svgs col-md-1">
@@ -178,15 +184,15 @@
         <div class="infos" data-scroll-section>
             <div data-scroll class="line w-auto"></div>
             <div class="scroll w-auto d-flex my-3" data-scroll>
-                <div>
+                <div data-scroll>
                     <span> we <span>are</span> <span>Alang</span> <span>Institute</span> <span>kita</span> <span>alang</span> <span>institute</span></span>
                     <span> we <span>are</span> <span>Alang</span> <span>Institute</span> <span>kita</span> <span>alang</span> <span>institute</span></span>
                 </div>
-                <div>
+                <div data-scroll>
                     <span>-</span>
                     <span></span>
                 </div>
-                <div>
+                <div data-scroll>
                     <span> we <span>are</span> <span>Alang</span> <span>Institute</span> <span>kita</span> <span>alang</span> <span>institute</span></span>
                     <span> we <span>are</span> <span>Alang</span> <span>Institute</span> <span>kita</span> <span>alang</span> <span>institute</span></span>
                 </div>    
@@ -209,6 +215,7 @@ import CircleType from 'circletype';
 export default {
   name: 'About',
   mounted(){
+      this.masi();
       this.anim();
       this.circle();
   },
@@ -222,6 +229,10 @@ export default {
       anim(){
           let tl = new gsap.timeline();
           tl.to('.sp',{y: '0%',duration: 1.8, stagger: 0.5, ease: Expo.ease});
+      },
+      masi(){
+          let tl = new gsap.timeline();
+          tl.fromTo(".anim",5,{ opacity: 0, y: "100%" },{duration: 3, opacity: 1, stagger: 1, y: "0%" });
       }
   },
   mixins: [LocomotiveScroll],
@@ -263,10 +274,11 @@ export default {
             .w-500{
                 width: 600px;
             }
-            h5{
+            
+            h6,h5{
                 font-family: $font-perpetua;
-                font-size: 27px;
-                line-height: 25px;
+                font-size: 24px;
+                line-height: 23px;
             }
             .misi{
                 margin-top: 80px;
@@ -384,6 +396,32 @@ export default {
     }
     100%{
         transform: translate(-100%,0);
+    }
+}
+
+@media (max-width: 700px){
+    .about{
+        h2{
+            font-size: 50px;
+            line-height: 40px;
+        }
+        .top-mid{
+            margin-top: 80px;
+            .visimisi{
+                h5,h6{
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .box__br{
+            border-right: 0px !important;
+            border-bottom: 0px !important;
+        }
+        .box_bl{
+            border-bottom: 0px !important;
+            padding-left: 0px !important;
+        }
     }
 }
 </style>

@@ -1,4 +1,3 @@
-
 $background: #fafaf6;
 $primary: #222831;
 $accent: #282B29;
@@ -10,7 +9,7 @@ $pink: #F4C4C4;
 $bg: #1b2021;
 
 
-#app.theme-red{
+#baseweb.theme-red{
     background: $background;
     color: $red;
     a{
@@ -23,26 +22,9 @@ $bg: #1b2021;
         background: $red;
         height: 0.80px;
     }
-    .rb{
-        border-right: 0.5px solid $red;
-        border-bottom: 0.5px solid $red;
-    }
-    .lb{
-        border-left: 0.5px solid $red;
-        border-bottom: 0.5px solid $red;
-    }
-    .rt{
-        border-right: 0.5px solid $red;
-        border-top: 0.5px solid $red;
-    }
-    .lt{
-        border-left: 0.5px solid $red;
-        border-top: 0.5px solid $red;
-    }
     svg{
         fill: $red;
     }
-
     .box__br{
         border-right: 0.0001px solid $red;
         border-bottom: 0.0001px solid;
@@ -52,8 +34,12 @@ $bg: #1b2021;
         border-bottom: 0.0001px solid;
         border-bottom-color: $red;  
     }
+    .navi{
+        background: $background;
+        color: $red;
+    }
 }
-#app.theme-white{
+#baseweb.theme-white{
     background: $background;
     color: $primary;
     a{
@@ -66,22 +52,6 @@ $bg: #1b2021;
     }
     .here{
         border-bottom: 1px solid $primary;
-    }
-    .rb{
-        border-right: 0.5px solid $primary;
-        border-bottom: 0.5px solid $primary;
-    }
-    .lb{
-        border-left: 0.5px solid $primary;
-        border-bottom: 0.5px solid $primary;
-    }
-    .rt{
-        border-right: 0.5px solid $primary;
-        border-top: 0.5px solid $primary;
-    }
-    .lt{
-        border-left: 0.5px solid $primary;
-        border-top: 0.5px solid $primary;
     }
     svg{
         fill: $primary;
@@ -96,8 +66,12 @@ $bg: #1b2021;
         border-bottom: 0.0001px solid $primary;
         border-bottom-color: $primary;
     }
+    .navi{
+        background: $background;
+        color: $primary;
+    }
 }
-#app.theme-green{
+#baseweb.theme-green{
     background: $green;
     color: $background;
     a{
@@ -110,22 +84,6 @@ $bg: #1b2021;
     }
     .here{
         border-bottom: 1px solid $background;
-    }
-    .rb{
-        border-right: 0.5px solid $background;
-        border-bottom: 0.5px solid $background;
-    }
-    .lb{
-        border-left: 0.5px solid $background;
-        border-bottom: 0.5px solid $background;
-    }
-    .rt{
-        border-right: 0.5px solid $background;
-        border-top: 0.5px solid $background;
-    }
-    .lt{
-        border-left: 0.5px solid $background;
-        border-top: 0.5px solid $background;
     }
     svg{
         fill: $background;
@@ -140,9 +98,13 @@ $bg: #1b2021;
         border-bottom: 0.0001px solid $background;
         border-bottom-color: $background;
     }
+    .navi{
+        background: $green;
+        color: $background;
+    }
 
 }
-#app.theme-soft{
+#baseweb.theme-soft{
     background: $soft;
     color: $red;
     a{
@@ -156,22 +118,7 @@ $bg: #1b2021;
         height: 0.80px;
         background: $red;
     }
-    .rb{
-        border-right: 0.5px solid $red;
-        border-bottom: 0.5px solid $red;
-    }
-    .lb{
-        border-left: 0.5px solid $red;
-        border-bottom: 0.5px solid $red;
-    }
-    .rt{
-        border-right: 0.5px solid $red;
-        border-top: 0.5px solid $red;
-    }
-    .lt{
-        border-left: 0.5px solid $red;
-        border-top: 0.5px solid $red;
-    }
+    
     svg{
         fill: $red;
     }
@@ -185,9 +132,13 @@ $bg: #1b2021;
         border-bottom: 0.0001px solid;
         border-bottom-color: $red;  
     }
+    .navi{
+        background: $soft;
+        color: $red;
+    }
 
 }
-#app.theme-dark{
+#baseweb.theme-dark{
     background: $accent;
     color: $soft;
     a{
@@ -201,26 +152,13 @@ $bg: #1b2021;
         height: 0.80px;
         background: $soft;
     }
-    .rb{
-        border-right: 0.5px solid $soft;
-        border-bottom: 0.5px solid $soft;
-    }
-    .lb{
-        border-left: 0.5px solid $soft;
-        border-bottom: 0.5px solid $soft;
-    }
-    .rt{
-        border-right: 0.5px solid $soft;
-        border-top: 0.5px solid $soft;
-    }
-    .lt{
-        border-left: 0.5px solid $soft;
-        border-top: 0.5px solid $soft;
-    }
     svg{
         fill: $soft;
     }
-
+    .navi{
+        background: $accent;
+        color: $soft;
+    }
     .box__br{
         border-right: 0.0001px solid $soft;
         border-bottom: 0.0001px solid;
@@ -232,7 +170,7 @@ $bg: #1b2021;
     }
 
 }
-#app.theme-pink{
+#baseweb.theme-pink{
     background: $pink;
     color: $accent;
     a{
@@ -245,22 +183,6 @@ $bg: #1b2021;
     }
     .here{
         border-bottom: 1px solid $accent;
-    }
-    .rb{
-        border-right: 0.5px solid $accent;
-        border-bottom: 0.5px solid $accent;
-    }
-    .lb{
-        border-left: 0.5px solid $accent;
-        border-bottom: 0.5px solid $accent;
-    }
-    .rt{
-        border-right: 0.5px solid $accent;
-        border-top: 0.5px solid $accent;
-    }
-    .lt{
-        border-left: 0.5px solid $accent;
-        border-top: 0.5px solid $accent;
     }
     svg{
         fill: $accent;
@@ -275,4 +197,29 @@ $bg: #1b2021;
         border-bottom: 0.0001px solid;
         border-bottom-color: $accent;
     }
+    .navi{
+        background: $pink;
+        color: $accent;
+    }
+}
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
+
+.slideback-leave-active,
+.slideback-enter-active {
+  transition: 1s;
+}
+.slideback-enter {
+  transform: translate(-100%, 0);
+}
+.slideback-leave-to {
+  transform: translate(100%, 0);
 }

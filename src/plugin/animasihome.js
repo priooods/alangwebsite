@@ -3,29 +3,19 @@ export default {
   computed: {
     animasi: function() {
       let tl = new gsap.timeline();
-      tl.fromTo(
-        ".logo",
-        1,
-        { opacity: 0, y: "100%" },
-        { opacity: 1, stagger: 3, y: "0%" }
-      );
-      tl.fromTo(
-        ".anim",
-        2,
-        { opacity: 0, y: "100%" },
-        { opacity: 1, stagger: 3, y: "0%" }
-      );
+      tl.fromTo(".logo", 1, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%" });
+      tl.fromTo(".anim", 2, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%" });
       tl.fromTo(
         ".desc1",
         1,
         { opacity: 0, y: "100%" },
-        { opacity: 1, stagger: 3, y: "0%" }
+        { opacity: 1, y: "0%" }
       );
       tl.fromTo(
         ".desc2",
         1,
         { opacity: 0, y: "100%" },
-        { opacity: 1, stagger: 3, y: "0%" }
+        { opacity: 1, y: "0%" }
       );
       return tl;
     },
