@@ -12,12 +12,6 @@ export default {
         { opacity: 1, stagger: 1, y: "0%" }
       );
       tl.fromTo("#circlekecil", 0.5, { opacity: 0 }, { opacity: 1 });
-      tl.fromTo(
-        "#circlebesar",
-        0.5,
-        { opacity: 0 },
-        { opacity: 1, stagger: 1, y: "0%" }
-      );
       return tl;
     },
   },

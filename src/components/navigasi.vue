@@ -1,103 +1,102 @@
 <template>
   <div class="navigasi">
-      <div class="d-none d-lg-flex d-xl-flex d-md-flex justify-content-center py-3">
-          <p class="text-center text-uppercase cursor-pointer anim1" @click="back">Alang Institute</p>
-          <div class="d-flex text-uppercase mr-auto route">
-              <div class="anim2" @click="showlogin = true">
-                  <router-link to="/learn">learn</router-link>
-              </div>
-              <span class="mx-1 anim3"> | </span>
-              <div class="anim4"  @click="showlogin = false">
-                  <router-link to="/about">about</router-link>
-              </div>
-              <span class="mx-1 anim5"> | </span>
-              <div class="anim6" @click="showlogin = false">
-                  <router-link to="/contact">contact</router-link>
-              </div>
-          </div>
-          <div class="boxes" v-show="showlogin">
-              <p class="my-auto text-uppercase" @click="goadmin">Masuk</p>
-          </div>
-          <p class="text-uppercase" v-show="showlogin == false">Pandeglang, {{times}}</p>
-      </div>
-        <div class="h-100">
-            <div class="row justify-content-end py-4 d-blok d-lg-none d-xl-none d-md-none">
-                <div ><i @click="showing = true" class='bx bx-menu-alt-right bx-md'></i></div>
+        <div class="md:flex hidden stiky h-auto top-0 left-0 right-0 justify-end md:py-3 px-10 anim-web">
+            <div class="md:flex uppercase relative hidden mr-auto">
+                <router-link class="left flex justify-start" to="/learn">
+                    <div class="rounded my-auto mr-2 h-1 w-1 opacity-0"></div>
+                    <p data-cursor-hover class="uppercase mr-auto cursor-pointer text-xs">labs</p>
+                </router-link>
+                <router-link class="left md:mx-3 flex" to="/about">
+                    <div class="rounded my-auto mr-2 h-1 w-1 opacity-0"></div>
+                    <p data-cursor-hover class="uppercase mr-auto my-auto cursor-pointer text-xs">about</p>
+                </router-link>
+                <router-link class="left flex" to="/contact">
+                    <div class="rounded my-auto mr-2 h-1 w-1 opacity-0"></div>
+                    <p data-cursor-hover class="uppercase mr-auto cursor-pointer text-xs">contact</p>
+                </router-link>
             </div>
-            <transition tag="div" class="div-slider" :name="showing? 'slideback' : 'slide'">
-                <div class="navi position-absolute" v-show="showing">
-                    <div class="d-flex py-3 px-3 justify-content-end">
-                        <i @click="showing = false" class='bx bx-x bx-md'></i>
-                    </div>
-                    <ul class="list-unstyled pl-3">
-                        <li>
-                            <div @click="showing = false">
-                                <router-link class="text-uppercase" to="/">Home</router-link>
-                            </div>
-                        </li>
-                        <li>
-                            <div @click="showing = false">
-                                <router-link class="text-uppercase" to="/learn">learn</router-link>
-                            </div>
-                        </li>
-                        <li>
-                            <div @click="showing = false">
-                                <router-link class="text-uppercase" to="/about">about</router-link>
-                            </div>
-                        </li>
-                        <li>
-                            <div @click="showing = false">
-                                <router-link class="text-uppercase" to="/contact">contact</router-link>
-                            </div>
-                        </li>
-                        <li>
-                            <div @click="showing = false">
-                                <router-link class="text-uppercase" to="/admin">Masuk</router-link>
-                            </div>
-                        </li>
-                    </ul>
+            <router-link to="/"><p class="uppercase title text-xs no-underline cursor-pointer md:ml-0 ml-2 my-auto">Alang Institute</p></router-link>
+            <p class="uppercase hidden md:block time ml-auto text-xs">Pandeglang, {{times}}</p>
+        </div>
+        <div class="md:hidden block py-2 bg-nav z-30 bg-menu">
+            <div class="flex justify-start">
+                <router-link to="/"><p class="uppercase title cursor-pointer md:ml-0 ml-2 my-auto">Alang Institute</p></router-link>
+                <div class="icons ml-auto my-auto px-2"><i class='bx bx-menu-alt-right'></i></div>
+            </div>
+        </div>
+        <div class="min-h-screen md:hidden absolute z-20 xs:-left-96 -left-full w-full layer-menu bg-nav bg-menu">
+            <div class="text-xs uppercase mt-6 ml-3 menu-mobile">
+                <div class="closed">
+                    <router-link to="/learn" class="flex" exact>
+                        <p class="font-semibold text-3xl my-auto">labs</p>
+                        <div class="rounded-full my-auto ml-4 h-2 w-2 opacity-0"></div>
+                    </router-link>
                 </div>
-            </transition>
+                <div class="closed">
+                    <router-link to="/about" class="flex mt-3">
+                        <p class="font-semibold text-3xl my-auto">about</p>
+                        <div class="rounded-full my-auto ml-4 h-2 w-2 opacity-0"></div>
+                    </router-link>
+                </div>
+                <div class="closed">
+                    <router-link to="/contact" class="flex mt-3">
+                        <p class="font-semibold text-3xl my-auto">contact</p>
+                        <div class="rounded-full my-auto ml-4 h-2 w-2 opacity-0"></div>
+                    </router-link>
+                </div>
+            </div>
         </div>
   </div>
 </template>
 
 <script>
-import TimelineMax from 'gsap';
+import { Expo, TimelineMax } from "gsap";
 import moment from 'moment';
+import $ from 'jquery';
 export default {
     name: 'Navigasi',
+    props:{
+      colors: String
+    },
     methods:{
-        back(){
-            this.showlogin = true;
-            return this.$router.push('/', ()=>{});
-        },
-        goadmin(){
-            return this.$router.push('/admin',()=> {});
-        },
         gettimes(){
             moment.locale('en');
-            this.times = moment().format('h:mm:ss a');
+            this.times = moment().format('h:mm a');
         },
-        animasimenu(){
-            var an = new TimelineMax();
-            an.reversed(!an.reversed());
+        animationMenu: function () {
+            const tl = new TimelineMax();
+            tl.fromTo(".anim-web .left, .anim-web .title, .anim-web .time", { y: -90 }, { duration: 2, stagger: 0.8, y: 0, ease: Expo.easeInOut});
         },
-        halobanget(){
-            return console.log("Hallo World apa kabar");
-        }
+        animationMenuMobile: function () {
+            const tl = new TimelineMax();
+            tl.fromTo(".navigasi .bg-nav .title, .navigasi .bg-nav .icons", { y: -90 }, { duration: 2, stagger: 0.8, y: 0, ease: Expo.easeInOut});
+        },
+        menumobileanim(){
+            const tl = new TimelineMax({paused: true});
+            tl.to('.layer-menu', 1, { left: '0%', ease: Expo.easeInOut});
+            tl.staggerFrom(".layer-menu .menu-mobile .closed",1,{ opacity: 0, x: -250, ease: Expo.easeOut }, 0.3);
+            tl.reverse();
+            $(document).on('click',".navigasi .icons", function(){
+                tl.reversed(!tl.reversed());
+            });
+            $(document).on('click',".navigasi .title", function(){
+                tl.reversed(!tl.reversed());
+            });
+            $(document).on('click',".menu-mobile .closed", function(){
+                tl.reversed(!tl.reversed());
+            });
+        },
     },
     data(){
         return{
             times: null,
-            showlogin: true,
-            showing: false
         }
     },
     mounted() {
-        setInterval(() => {
-            this.gettimes()
-        }, 1000);
+        this.gettimes();
+        this.animationMenuMobile();
+        this.menumobileanim();
+        this.animationMenu();
     }
     
 }
@@ -108,33 +107,15 @@ export default {
 @import '../style.scss';
 .navigasi{
     p, .route{
-        font-size: 13px;
         font-family: $font-reguler;
     }
-    .anim1{
-        cursor: pointer;
-    }
-    .route{
-        margin-left: 155px;
-        a{
-            text-decoration: none;
-        }
-        a:hover{
-            text-decoration: none;
-        }
-        
-    }
-    .navi{
-        top: 0;
-        right: 0;
-        z-index: 10;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        ul li a {
-            font-size: 35px;
-        }
-    }
+}
+a.active{
+  .rounded{
+    opacity: 1;
+  }
+  .rounded-full{
+    opacity: 1;
+  }
 }
 </style>

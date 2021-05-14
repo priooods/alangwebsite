@@ -1,34 +1,37 @@
 <template>
-  <div class="contact" data-scroll-container>
-      <div class="d-md-flex d-md-px-5">
-          <div class="isi position-relative">
-              <p class="text-uppercase mt-5 anim">for any enquiry <br class="d-none d-md-block">or just to say <span>hello</span> <br> reach out <a class="here" href="#" data-cursor-hover>here</a></p>
-              <div class="line lr mt-5 w-auto"></div>
-              <div class="row w-100 justify-content-end my-5 ctc">
-                  <h6 data-cursor-hover class="anim col-md-4 col-6">info <br>@alanginstitute.com <br>(+62) 813 9849 8822</h6>
-                  <h6 class="mx-auto anim col-md-4 col-6" data-cursor-hover>4213 Pandeglang <br> Banten (IND)<br>(+62) 896 4381 6568</h6>
-                  <h6 data-cursor-hover class="anim col-md-4 col-12"><a href="https://www.facebook.com/priooods/">Facebook</a><br><a href="#">Youtube</a><br><a href="https://www.instagram.com/priooods/">Instagram</a></h6>
+  <div class="contact min-h-screen" data-scroll-container>
+      <div class="md:flex justify-center block md:px-0 px-2"  data-scroll-section>
+          <div class="w-full md:w-3/6 md:mt-20 md:pt-0 relative">
+              <p data-scroll class="uppercase anim md:text-lg pt-20 md:pt-0 md:mt-8">untuk setiap pertanyaan atau<br> katakan <a class="here" href="#" data-cursor-hover>hallo</a> kepada kami</p>
+              <div class="line lr mt-10 w-auto mb-10"></div>
+              <div class="grid md:grid-cols-3 grid-cols-2 md:gap-1 gap-2 ctc">
+                  <h6 data-cursor-hover data-scroll class="anim text-xs uppercase">info@alanginstitute.com <br> (+62) 813 9849 8822</h6>
+                  <h6 data-scroll class="anim text-xs uppercase">4213 Pandeglang, Banten (IND)<br>(+62) 896 4381 6568</h6>
+                  <h6 data-scroll class="anim text-xs uppercase">
+                    <a href="https://www.facebook.com/priooods/">Facebook</a><br>
+                    <a href="#" class="my-2">Youtube</a><br>
+                    <a href="https://www.instagram.com/priooods/">Instagram</a></h6>
               </div>
-              <div class="line ll mt-5 w-auto"></div>
-              <div class="bc position-absolute">
-                <h6 class="anim">we're always keen to hear <br> from other creative minds. <br>drop us a line at <br><span data-cursor-hover>career@alanginstitute.com</span></h6>
-                <h5 class="position-absolute text-uppercase" id="circlekecil">want to join the crew ? want to join the crew ? want to join the crew ? want to join the crew ? want to join the crew ? </h5>
+              <div class="line ll w-auto mt-10"></div>
+              <div class="bc h-full relative">
+                <div class="md:absolute relative md:bottom-4 right-0">
+                  <h6 data-scroll class="anim uppercase md:static absolute top-52 right-0 text-xs">kami selalu ingin mendengar <br> semua pikiran kreatif kamu <br>hubungi kami <br><span data-cursor-hover>career@alanginstitute.com</span></h6>
+                  <h5 data-scroll class="uppercase absolute md:left-0 left-52 right-0 md:-top-28 top-14" id="circlekecil">bergabung dengan kami ? bergabung dengan kami ? bergabung dengan kami ? bergabung dengan kami ? bergabung dengan kami ? </h5>
+                </div>
               </div>
           </div>
       </div>
-      <h3 id="circlebesar" class="d-none">contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;contact&nbsp;us&nbsp;</h3>
-      <cursor-fx :color="colors" :color-hover="colors"/>
+      <cursor-fx class="md:block hidden" :color="colors" ref="cursor" :color-hover="colors" disabled/>
   </div>
 </template>
 
 <script>
-import LocomotiveScroll from '@/plugin/locomotive.js';
+import LocomotiveScroll from '../plugin/locomotive.js';
 import Animasi from '@/plugin/animasicontact.js';
 import CircleType from 'circletype';
 export default {
   mixins: [LocomotiveScroll,Animasi],
   mounted() {
-    this.circlefull();
     this.circle();
   },
   props:{
@@ -36,92 +39,22 @@ export default {
   },
   methods:{
     circle(){
-      new CircleType(document.getElementById('circlekecil')).radius(200);
-    },
-    circlefull(){
-      new CircleType(document.getElementById('circlebesar'));
+      new CircleType(document.getElementById('circlekecil')).radius(100);
     },
   }
 }
 </script>
 
 <style lang="scss">
-@import '@/assets/font/font.scss';
-@import '../style.scss';
-#circlebesar{
-  font-family: $font-reguler;
-  text-transform: uppercase;
-  font-size: 80px;
-  right: 45%;
-  position: absolute;
-  top: 80%;
-  animation: animate 60s infinite linear;
+#circlekecil{
+  animation: animate 30s infinite linear;
 }
-.contact{
-  .isi{
-      margin-left: 206px;
-      width: 650px;
-      height: 100vh;
-      padding-top: 30px;
-      p{
-          font-family: $font-perpetua;
-          font-size: 28px;
-          line-height: 26px;
-          a{
-              text-decoration: none;
-              line-height: 0.50;
-          }
-      }
-      .ctc{
-        width: 530px;
-        h6,a{
-            font-family: $font-reguler;
-            font-size: 13px;
-            
-            line-height: 16px;
-            text-transform: uppercase;
-        }  
-        a:hover{
-            text-decoration: none;
-        }
-      }
-      .bc{
-          bottom: 0px;
-          right: 0px;
-          h6{
-              text-transform: uppercase;
-              font-family: $font-reguler;
-              font-size: 13px;
-              line-height: 16px;
-              span{
-                font-family: $font-bold;
-              }
-          }
-          #circlekecil{
-            font-family: $font-bold;
-            left: 50%;
-            font-size: 18px;
-            top: 150%;
-            animation: animate 30s infinite linear;
-          }
-          
-      }
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
   }
-  @keyframes animate {
-    0%{
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100%{
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
-}
-@media (max-width: 700px){
-  .contact{
-    .isi{
-      max-width: 100%;
-      margin-left: 0px;
-    }
+  100%{
+    transform: rotate(360deg);
   }
 }
 </style>
